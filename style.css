@@ -1,0 +1,150 @@
+@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+
+
+@font-face{
+	font-family: 'BarlowSemiCondensed-Medium';
+	src: url('fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf') format('ttf');
+}
+
+/*@font-face{
+	font-family: 'LucidaCallig';
+	src: url('fonts/LCALLIG/LCALLIG.woff') format('woff');}*/
+
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+   font-family: 'Barlow Semi Condensed',serif;
+}*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: hsl(214, 47%, 23%);
+/*	background-color: #1C384A;*/
+	font-family: 'BarlowSemiCondensed-Medium',serif;
+	/*font-family: 'Courier New';*/
+	font-size: 150%;
+	line-height: 1.4rem;
+}
+
+/* - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)*/
+/*- Weights: 600, 700*/
+
+.container-outer {
+	background-color: #85b3d1ff;
+	width: 100%;
+	border: 1px red solid;
+
+	height: auto;	
+	background-size: cover; 
+}
+
+.container-inner {
+	background-color: blue;
+	width: 80%;
+	border: 1px yellow solid;
+	
+	flex: 1 1 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.box-heading {
+	display: flex;
+	flex-direction: row;
+	border: 5px white solid;
+	padding: 10px;
+	/*margin: 10px;*/
+}
+
+.box-title {
+	margin: 10px;
+	font-family:"Barlow Semi Condensed";
+	border: 1px brown solid;
+}
+
+.box-score {
+	margin: 10px;
+	border: 1px orange solid;
+}
+
+.box-game {
+	border: 1px green soli);
+	/*display: flex;*/
+	/*flex-direction: row;*/
+	margin: 10px;
+	background-image: url("images/bg-triangle.svg");
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	background-size: contain; /* use cover to get full width, instead of contain vs contain */
+}
+
+.layout__skills {
+	/*background-color: #3D7BA4;*/
+	background-color: #85b3d1ff;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.scissors {
+	background-color: hsl(39, 89%, 49%);
+}
+
+/*circle {
+	stroke: yellow;
+	stroke-width; 20;
+	fill: white;
+
+}
+*/
+/*Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)*/
+
+.color_scissors {
+	stroke: hsl(39, 89%, 49%);
+	stroke-width: 5;
+}
+.color_paper {
+	 stroke: hsl(230, 89%, 62%);
+	 stroke-width: 5;
+}
+.color_rock {
+	stroke: hsl(349, 71%, 52%) ;
+	stroke-width: 5;
+}
+.circle_icon {
+	/*stroke: green;*/
+	stroke-width: 10;
+	fill: white;
+}
+
+/*circle {
+  fill: red;
+}
+*/
+.orbit-lines {
+	/*php complains about unknown property cx & cy*/
+	/*cx: 400px;*/
+	/*cy: 400px;*/
+	stroke: yellow;
+	stroke-width: 10px;
+	fill-opacity: 0;
+}
+
+#mercury {
+	animation-duration: 6s;
+	fill: rosybrown;
+}
+
+/* SVG STUFF*/
+svg {
+  width: 200px;
+}

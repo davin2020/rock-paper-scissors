@@ -20,6 +20,11 @@
   Play Again
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Barlow+Semi+Condensed:600,700&amp;lang=en" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -28,6 +33,62 @@
 <body>
 
 
+<div class="container-outer">
+  <div class="container-inner">
+    <div class="box-heading">
+
+      <div class="box-title">
+        <img src="images/logo.svg" />
+        <!-- <img src="images/logo-bonus.svg" /> -->
+      </div>
+      <div class="box-score">
+        Score 23
+      </div>
+
+    </div>
+
+    <div class="box-game">
+      <svg height="200" width="200">
+        <!-- can see these ok  -->
+        <circle cx="50" cy="50" r="50" class="circle_icon color_paper" />
+        <circle cx="100" cy="100" r="50" class="circle_icon color_scissors" />
+         <circle cx="150" cy="170" r="50" class="circle_icon color_rock" />
+        </svg>
+        <!-- whats this about?
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"> -->
+
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="30" class="circle_icon color_rock" />
+        <circle cx="70" cy="70" r="30" class="circle_icon color_paper" />
+      </svg>
+
+      <circle cx="475" cy="430" r="5" class="planet" id="mercury" />
+
+
+      <div class="circle">
+      <circle cx="150" cy="150" r="50" class="circle_icon color_paper" />
+
+      <img src="images/icon-paper.svg" />
+      </div>
+      
+      <div class="scissors">
+        <img src="images/icon-scissors.svg" />
+      </div>
+
+        <img src="images/icon-rock.svg" />
+
+        <circle cx="400" cy="400" r="80" class="orbit-lines" />
+        <circle cx="10" cy="10" r="50" class="orbit-lines" />
+
+        <circle cx="475" cy="430" r="5" class="planet" id="mercury" />
+
+        <!-- <img src="images/bg-pentagon.svg" /> -->
+        <!-- <img src="images/bg-triangle.svg" /> -->
+
+      </svg>
+    </div>
+  </div>
+</div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
