@@ -1,4 +1,5 @@
 // add event listeners to all 3 images
+//change this to modern format, whcih returne a collection? eg  document.querySelectorAll or elem.querySelector(css) - see https://javascript.info/searching-elements-dom
 let playerIconRock = document.getElementById("iconRock");
 playerIconRock.addEventListener("click", function() {
 	// console.log('Rock event listener');
@@ -15,22 +16,64 @@ playerIconScissors.addEventListener("click", function() {
   	startGame("scissors");
 });
 
-//scoring is currently cummulative in interactive version
+let playAgain = document.getElementById("btnPlayAgain");
+playAgain.addEventListener("click", function() {
+  	resetGame();
+});
+
+//only scoring for player1, the user, is required
 var player1Score = 0;
 var player2Score = 0;
 
 function startGame(userChosenIcon) {
 	let player1Icon = userChosenIcon;
+	//show text and image of what user has picked
 	updateElementWithContent("userIcon", player1Icon);
-	let player2Icon = chooseRandomItem();
-	updateElementWithContent("houseIcon", player2Icon);
+	updateElementWithImage("userIconImage", player1Icon);
 
-	let result = determineWinner(player1Icon, player2Icon);
-	console.log('Result: ' + result);
-	updateElementWithContent("resultMessage", result);
+	console.log('about to call setTimeout');
+	//wait 2 secs before displayng what the house has randomly picked
+	setTimeout(() => {
+		let player2Icon = chooseRandomItem();
+		updateElementWithContent("houseIcon", player2Icon);
+		updateElementWithImage("houseIconImage", player2Icon);
 
-	console.log('Player 1 Score - User: ' + player1Score);
-	console.log('Player 2 Score - House: ' + player2Score);
+		// 2 sec delay until results/score are shown
+		setTimeout(() => {
+			let result = determineWinner(player1Icon, player2Icon);
+			// console.log('Result: ' + result);
+			updateElementWithContent("resultMessage", result);
+			updateElementWithContent("userScore", player1Score);
+			// console.log('Player 1 Score - User: ' + player1Score);
+			// console.log('Player 2 Score - House: ' + player2Score);
+		}, 2000);
+
+	}, 2000);
+}
+
+//removes chosen icons, images, and result text, but sscore is still displayed
+function resetGame() {
+	updateElementWithContent("userIcon", "_");
+	updateElementWithImage("userIconImage", "_");
+	updateElementWithContent("houseIcon", "_");
+	updateElementWithImage("houseIconImage", "_");
+	updateElementWithContent("resultMessage", "_");
+}
+
+function updateElementWithImage(element, icon) {
+	if (icon == "rock") {
+		document.getElementById(element).src = "images/icon-rock.svg";
+	}
+	else if (icon == "paper") {
+		document.getElementById(element).src = "images/icon-paper.svg";
+	}
+	else if (icon == "scissors") {
+		document.getElementById(element).src = "images/icon-scissors.svg";
+	}
+	//else remove the image
+	else {
+		document.getElementById(element).src = "";
+	}
 }
 
 function updateElementWithContent(element, content) {
@@ -79,14 +122,14 @@ function determineWinner(player1Item, player2Item) {
 	//player 2 ie House wins
 	else if (doesXBeatY(player2Item, player1Item)) {
 		winner = 'You Lose, beaten by the House!';
-		player2Score ++;
+		// player2Score ++;
+		player1Score --;
 	}
 	else {
 		winner = "It's a Draw!";
 	}
 	return winner;
 }
-
 
 
 //call the functions
