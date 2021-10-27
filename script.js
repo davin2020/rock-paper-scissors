@@ -27,6 +27,11 @@ var player2Score = 0;
 
 function startGame(userChosenIcon) {
 	let player1Icon = userChosenIcon;
+	//hide the icon-images that the user can choose from
+	updateElementWithImage("iconRock", "");
+	updateElementWithImage("iconPaper", "");
+	updateElementWithImage("iconScissors", "");
+
 	//show text and image of what user has picked
 	updateElementWithContent("userIcon", player1Icon);
 	updateElementWithImage("userIconImage", player1Icon);
@@ -53,6 +58,12 @@ function startGame(userChosenIcon) {
 
 //removes chosen icons, images, and result text, but sscore is still displayed
 function resetGame() {
+	//show the icon-images that the user can choose from
+	updateElementWithImage("iconRock", "rock");
+	updateElementWithImage("iconPaper", "paper");
+	updateElementWithImage("iconScissors", "scissors");
+
+	//remove the previouslly picked icons and images
 	updateElementWithContent("userIcon", "_");
 	updateElementWithImage("userIconImage", "_");
 	updateElementWithContent("houseIcon", "_");
