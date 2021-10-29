@@ -1,20 +1,11 @@
-@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+/* Cross Origin Read Blocking issue */
+/*@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);*/
 
 
 @font-face{
-	font-family: 'BarlowSemiCondensed-Medium';
+	font-family: 'BarlowSemiCondensed_Medium';
 	src: url('fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf') format('ttf');
 }
-
-/*@font-face{
-	font-family: 'LucidaCallig';
-	src: url('fonts/LCALLIG/LCALLIG.woff') format('woff');}*/
-
-/*@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-body{
-   font-family: 'Barlow Semi Condensed',serif;
-}*/
 
 * {
 	box-sizing: border-box;
@@ -25,159 +16,120 @@ body {
 	margin: 0;
 	background-color: hsl(214, 47%, 90%);
 /*	background-color: #1C384A;*/
-	font-family: 'BarlowSemiCondensed-Medium',serif;
-	/*font-family: 'Courier New';*/
-	font-size: 150%;
+	font-family: 'BarlowSemiCondensed_Medium', sans-serif;
+	font-size: 1.2rem;
 	line-height: 1.4rem;
 }
 
-/* - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)*/
-/*- Weights: 600, 700*/
+h2 {
+	text-align: center;
+}
+div {
+	/*border: 2px solid green;*/
+}
 
-.container-outer {
+p {
+	text-align: center;
+}
+
+/*Horizontally centering is managed by the justify-content property and vertical centering by align-items.*/
+ /*to center - apply flex and justify-content: center to parent div */
+.container{
+	position: relative;
+/*	display: flex;
+	justify-content: center;*/
+}
+
+.container-game{
+	/*display: flex;*/
+	/*position: relative;*/
 	background-color: #85b3d1ff;
-	width: 100%;
-	border: 1px red solid;
-
+	width: 90%;
+	/*border: 2px red solid;*/
 	height: auto;	
-	background-size: cover; 
+	/* Center horizontally*/
+  	margin: 0 auto;
 }
 
-.container-inner {
-	background-color: blue;
-	width: 80%;
-	border: 1px yellow solid;
-	
-	flex: 1 1 300px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.box-heading {
+.container-header {
 	display: flex;
 	flex-direction: row;
-	border: 5px white solid;
+	/*border: 5px white solid;*/
 	padding: 10px;
+	/*align-items: ;*/
+	justify-content: space-between;
 	/*margin: 10px;*/
 }
 
-.box-title {
+.container-body {
+	/*border: 2px solid blue;*/
+	/*position: relative;*/
+}
+
+/*only centers div not imgs?*/
+.section-icons {
+	margin: 0 auto;
+}
+
+.picked {
+	/* this shoudl only apply to each child item, not the flex parent itself */
+	flex: 1 1 33%;
 	margin: 10px;
-	font-family:"Barlow Semi Condensed";
-	border: 1px brown solid;
 }
 
-.box-score {
+/* need to center all the things ! */
+.container-flex-output {
+	width: 90%;
+	/*border: 2px yellow solid;*/
+	/*flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'> /* Three values syntax */
+	/*flex: 1 1 400px;*/
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	/* Center horizontally using auto option*/
+	margin: 10px auto;
+}
+
+.icon_size {
+	width: 100px; 
+	height: 100px;
+}
+
+/* img is still being cut off a little */
+.icon_border {
+	/*border: 10px black solid;*/
+	border-radius: 50px;
 	margin: 10px;
-	border: 1px orange solid;
+	padding: 20px;
+	background-color: white;
 }
 
-.box-game {
-	border: 1px green solid;
-	/*display: flex;*/
-	/*flex-direction: row;*/
-	margin: 10px;
-	background-image: url("images/bg-triangle.svg");
-	width: 100%;
-	height: auto;
-	background-repeat: no-repeat;
-	background-size: contain; /* use cover to get full width, instead of contain vs contain */
-}
-
-.layout__skills {
-	/*background-color: #3D7BA4;*/
-	background-color: #85b3d1ff;
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
-
-.scissors {
-	width: 100%;
-	background-color: hsl(39, 89%, 49%);
-}
-
-/*circle {
-	stroke: yellow;
-	stroke-width; 20;
-	fill: white;
-
-}
-*/
-/*Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
-- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
-- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)*/
-
-.color_scissors {
-	stroke: hsl(39, 89%, 49%);
-	stroke-width: 5;
-}
-.color_paper {
-	 stroke: hsl(230, 89%, 62%);
-	 stroke-width: 5;
-}
 .color_rock {
-	stroke: hsl(349, 71%, 52%) ;
-	stroke-width: 5;
-}
-.circle_icon {
-	/*stroke: green;*/
-	stroke-width: 10;
-	fill: white;
+	border: 10px solid red;
 }
 
-/*circle {
-  fill: red;
+.color_paper {
+	border: 10px solid blue;
+}
+
+/*need to center img so border doesnt cut off fingers of icon*/
+.color_scissors {
+	border: 10px solid yellow;
+}
+
+/*
+button {
+	text-align: center;
+	not right way to center img
+	margin: 0 auto;
 }
 */
-.orbit-lines {
-	/*php complains about unknown property cx & cy*/
-	/*cx: 400px;*/
-	/*cy: 400px;*/
-	stroke: yellow;
-	stroke-width: 10px;
-	fill-opacity: 0;
+
+/*need to center parent of above button*/
+.center {
+	text-align: center;
+	/*not right way to center img*/
+	margin: 0 auto;
 }
 
-#mercury {
-	animation-duration: 6s;
-	fill: rosybrown;
-}
-
-/* SVG STUFF*/
-svg {
-  width: 200px;
-}
-
-/* new stuff 22 october */
-
-.treatment-methods__icons {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.treatment-method__icon__container {
-  flex: 1 0 21%;
-  margin: 5px;
-  height: 100px;
-}
-
-.treatment-method__icon__outer_circle {
-  background-color: white;
-  border-radius: 50%;
-  border: 5px solid green;
-  width: 80px;
-  height: 80px;
-  padding: 10px;
-  margin: 10px;
-}
-
-.treatment-methods_icon {
-  vertical-align: middle;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  color: #ffffff;
-}
