@@ -16,14 +16,14 @@
 				<img src="images/logo.svg">
 			</div>
 			<div class="container-score">
-				<h2>Your Score</h2>
-				<p id="userScore">_</p>
+				<h2 class="score_title">Score</h2>
+				<p id="userScore" class="score_value">&nbsp12</p>
 			</div>
 
 		</div>
 
 		<div class="container-body">
-			<div class="section-icons">
+			<div id="div_icons" class="section-icons">
 				<img id="iconRock" src="images/icon-rock.svg">
 				<img id="iconPaper" src="images/icon-paper.svg">
 				<img id="iconScissors" src="images/icon-scissors.svg">
@@ -42,12 +42,14 @@
 					<h2>Result</h2>
 					<p id="resultMessage">_</p>
 					<input type="submit" id="btnPlayAgain" value="Play Again" class="center">
+					<!-- alt buttons -->
 					<!-- <button type="submit" id="btnPlayAgain" value="Play Again">BTN</button> -->
+					<!-- <button onclick="toggleClock()" id="clockButton">Show clock</button> -->
 				</div>
 				<div class="section-house-picked picked">
 					<h2>The House Picked</h2>
 					<p id="houseIcon">_</p>
-					<img id="houseIconImage" >
+					<img id="houseIconImage">
 					<!-- icon_size was applied to imgs -->
 				</div>
 			</div>
@@ -88,7 +90,7 @@
 	<h2>Your Score</h2>
 	<p class="center" id="userScore">_</p>
   </div> -->
-  
+
 <!--   
   You Win
   You Lose 
@@ -98,6 +100,7 @@
 -->
 
   <!-- <input type="submit" id="btnPlayAgain" value="Play Again"> -->
+
 
   <script type="text/javascript" src="script.js"></script>
 
@@ -118,7 +121,7 @@
   
   <div class="attribution">
 	Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-	Coded by <a href="#">Your Name Here</a>.
+	Coded by <a href="#">Davin</a>.
   </div>
 </body>
 </html>
