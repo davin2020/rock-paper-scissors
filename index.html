@@ -24,23 +24,27 @@
 
 		<div class="container-body">
 			<div id="div_icons" class="section-icons">
-				<img id="iconRock" src="images/icon-rock.svg">
+				<!-- <img id="iconRock" src="images/icon-rock.svg">
 				<img id="iconPaper" src="images/icon-paper.svg">
-				<img id="iconScissors" src="images/icon-scissors.svg">
-				<!-- <img id="iconRock" src="images/icon-rock.svg" class="icon_border icon_size color_rock center" >
-				<img id="iconPaper" src="images/icon-paper.svg" class="icon_border icon_size color_paper">
-				<img id="iconScissors" src="images/icon-scissors.svg" class="icon_border icon_size color_scissors center"> -->
+				<img id="iconScissors" src="images/icon-scissors.svg"> -->
+				<!-- imgs are now moving around after Play Again button ie they are closer to the title div -->
+				<img id="iconRock" src="images/icon-rock.svg" class="icon_border icon_size color_rock " >
+				<img id="iconPaper" src="images/icon-paper.svg" class="icon_border icon_size color_paper ">
+				<img id="iconScissors" src="images/icon-scissors.svg" class="icon_border icon_size color_scissors ">
 			  </div>
 			<div class="container-flex-output">
 				<!-- flex 3 -->
 				<div class="section-user-picked picked">
 					<h2>You Picked</h2>
 					<p id="userIcon">_</p>
-					<img id="userIconImage">
+					<div id="div_user_icon"> 
+						<img id="userIconImage">
+					</div>
 				</div>
 				<div class="section-input-output picked center">
 					<h2>Result</h2>
 					<p id="resultMessage">_</p>
+					<!-- TODO hide button until after the Result is shown -->
 					<input type="submit" id="btnPlayAgain" value="Play Again" class="center">
 					<!-- alt buttons -->
 					<!-- <button type="submit" id="btnPlayAgain" value="Play Again">BTN</button> -->
@@ -49,8 +53,10 @@
 				<div class="section-house-picked picked">
 					<h2>The House Picked</h2>
 					<p id="houseIcon">_</p>
-					<img id="houseIconImage">
-					<!-- icon_size was applied to imgs -->
+					<div id="div_house_icon"> 
+						<img id="houseIconImage">
+						<!-- icon_size was applied to imgs -->
+					</div>
 				</div>
 			</div>
 			<!-- rules -->
