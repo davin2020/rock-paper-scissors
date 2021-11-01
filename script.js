@@ -32,9 +32,15 @@ function startGame(userChosenIcon) {
 	updateElementWithImage("iconPaper", "");
 	updateElementWithImage("iconScissors", "");
 
-	// hideDiv("div_icons");
+	hideDiv("div_icons");
 
 	//show text and image of what user has picked
+	showDiv("div_user_icon");
+
+		//dynammmic borders
+	// let targetImage = document.getElementById("userIconImage");
+	// event.target.classList.toggle('icon_border');
+
 	updateElementWithContent("userIcon", player1Icon);
 	updateElementWithImage("userIconImage", player1Icon);
 
@@ -42,6 +48,7 @@ function startGame(userChosenIcon) {
 	//wait 2 secs before displayng what the house has randomly picked
 	setTimeout(() => {
 		let player2Icon = chooseRandomItem();
+		showDiv("div_house_icon");
 		updateElementWithContent("houseIcon", player2Icon);
 		updateElementWithImage("houseIconImage", player2Icon);
 
@@ -60,7 +67,10 @@ function startGame(userChosenIcon) {
 
 //removes chosen icons, images, and result text, but sscore is still displayed
 function resetGame() {
-	// showDiv("div_icons");
+	showDiv("div_icons");
+	hideDiv("div_user_icon");
+	hideDiv("div_house_icon");
+	
 
 	//show the icon-images that the user can choose from
 	updateElementWithImage("iconRock", "rock");
@@ -99,27 +109,52 @@ function showDiv(divID){
 
 
 function updateElementWithImage(element, icon) {
+	let targetImage = document.getElementById(element);
+	console.log("targetImage ");
+	console.log(targetImage);
+	// targetImage.className = " icon_border icon_size color_rock center";
+	// icon is now empty string or
+	console.log("ICON " + icon);
 	if (icon == "rock") {
-		document.getElementById(element).src = "images/icon-rock.svg";
+		// document.getElementById(element).src = "images/icon-rock.svg";
 
 		//added 31 oct - works ok to put border around chosen icon, but may still  be off center? and need to remove the classes/border when no longer needed, or should border by combined w image??
-		let targetImage = document.getElementById(element);
+	// let targetImage = document.getElementById(element);
 		targetImage.src = "images/icon-rock.svg";
 		// now add border class to img? <img id="userIconImage"> 
 		// targetImage.classList.add("icon_border color_rock");
-		//this option let u add multiple classes - needs leading space, ohterwise name get combined wth prev/last class name! - remember to remove the class later or hide the div!
-		targetImage.className += " icon_border icon_size color_rock center";
+		//this option let u add multiple classes - needs leading space, ohterwise name get combined wth prev/last class name! - TODO remember to remove the class later or multiple instance of same class will be there  or hide the div!
+		
+		//when to remove theese added classses? in ELSE clause. need specific ones for each icon! 
+		targetImage.className = " icon_border icon_size color_rock center";
 		// <img id="iconRock" src="images/icon-rock.svg" class="icon_border icon_size color_rock center" >
+
+		// Toggles the existence of a class in an element’s list of classes.
+		// event.target.classList.toggle('icon_border')
 	}
 	else if (icon == "paper") {
-		document.getElementById(element).src = "images/icon-paper.svg";
+		// document.getElementById(element).src = "images/icon-paper.svg";
+		targetImage.src = "images/icon-paper.svg";
+		targetImage.className = " icon_border icon_size color_paper center";
 	}
 	else if (icon == "scissors") {
-		document.getElementById(element).src = "images/icon-scissors.svg";
+		// document.getElementById(element).src = "images/icon-scissors.svg";
+		targetImage.src = "images/icon-scissors.svg";
+		targetImage.className = " icon_border icon_size color_scissors center";
 	}
-	//else remove the image
+	// <img id="iconPaper" src="images/icon-paper.svg" class="icon_border icon_size color_paper">
+	// <img id="iconScissors" src="images/icon-scissors.svg" class="icon_border icon_size color_scissors center">
+
+	//else remove the image if icon is empty string
+	//REVIEW maybe dont need to rmeove clases if i just hide th whole div?
 	else {
-		document.getElementById(element).src = "";
+		// document.getElementById(element).src = "";
+		targetImage.src = "";
+
+		// let targetImage2 = document.getElementById(element);
+		targetImage.className -= " icon_border icon_size color_rock center";
+		console.log("removed classes from targetImage ");
+		console.log(targetImage);
 	}
 }
 
