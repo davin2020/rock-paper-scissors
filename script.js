@@ -23,7 +23,7 @@ playAgain.addEventListener("click", function() {
 
 //only scoring for player1, the user, is required
 var player1Score = 0;
-var player2Score = 0;
+var player2Score = 0; 
 
 function startGame(userChosenIcon) {
 	let player1Icon = userChosenIcon;
@@ -31,6 +31,8 @@ function startGame(userChosenIcon) {
 	updateElementWithImage("iconRock", "");
 	updateElementWithImage("iconPaper", "");
 	updateElementWithImage("iconScissors", "");
+
+	// hideDiv("div_icons");
 
 	//show text and image of what user has picked
 	updateElementWithContent("userIcon", player1Icon);
@@ -51,13 +53,15 @@ function startGame(userChosenIcon) {
 			updateElementWithContent("userScore", player1Score);
 			// console.log('Player 1 Score - User: ' + player1Score);
 			// console.log('Player 2 Score - House: ' + player2Score);
-		}, 2000);
-
-	}, 2000);
+		}, 1500);
+		//1.5 sec timeout
+	}, 1500);
 }
 
 //removes chosen icons, images, and result text, but sscore is still displayed
 function resetGame() {
+	// showDiv("div_icons");
+
 	//show the icon-images that the user can choose from
 	updateElementWithImage("iconRock", "rock");
 	updateElementWithImage("iconPaper", "paper");
@@ -71,9 +75,41 @@ function resetGame() {
 	updateElementWithContent("resultMessage", "_");
 }
 
+// const targetDiv = document.getElementById("third");
+// targetDiv.style.display = "block"; or none
+// id must be unique
+// ()
+// let playAgain = document.getElementById("btnPlayAgain");
+// playAgain.addEventListener("click", function() {
+//   	resetGame();
+// });
+//id must be unique - could toggle instead?
+function hideDiv(divID){
+	const targetDiv = document.getElementById(divID);
+	console.log(targetDiv);
+	// targetDiv.style.display = "none"; 
+	targetDiv.style.display = "none";
+}
+function showDiv(divID){
+	const targetDiv = document.getElementById(divID);
+	console.log(targetDiv);
+	// targetDiv.style.display = "none"; 
+	targetDiv.style.display = "block";
+}
+
+
 function updateElementWithImage(element, icon) {
 	if (icon == "rock") {
 		document.getElementById(element).src = "images/icon-rock.svg";
+
+		//added 31 oct - works ok to put border around chosen icon, but may still  be off center? and need to remove the classes/border when no longer needed, or should border by combined w image??
+		let targetImage = document.getElementById(element);
+		targetImage.src = "images/icon-rock.svg";
+		// now add border class to img? <img id="userIconImage"> 
+		// targetImage.classList.add("icon_border color_rock");
+		//this option let u add multiple classes - needs leading space, ohterwise name get combined wth prev/last class name! - remember to remove the class later or hide the div!
+		targetImage.className += " icon_border icon_size color_rock center";
+		// <img id="iconRock" src="images/icon-rock.svg" class="icon_border icon_size color_rock center" >
 	}
 	else if (icon == "paper") {
 		document.getElementById(element).src = "images/icon-paper.svg";
@@ -171,3 +207,4 @@ function determineWinner(player1Item, player2Item) {
 // console.log('Result 3: ' + result3);
 // console.log('Round 2 Score player1Score: ' + player1Score);
 // console.log('Round 2 Score player2Score: ' + player2Score);
+

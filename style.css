@@ -67,7 +67,7 @@ p {
 	/*- Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)*/
 	background-color: hsl(214, 47%, 40%);
 	width: 90%;
-	border: 2px red solid;
+	/*border: 2px red solid;*/
 	height: auto;	
 	/* Center horizontally*/
   	margin: 0 auto;
@@ -100,7 +100,7 @@ p {
 }
 
 .container-body {
-	border: 2px solid blue;
+	/*border: 2px solid blue;*/
 	/*position: relative;*/
 }
 
@@ -108,7 +108,7 @@ p {
 .section-icons {
 	display: block;
 	margin: 0 auto;
-	border: 2px black solid;
+	/*border: 2px black solid;*/
 	/*background-color:white;*/
 }
 
@@ -116,13 +116,13 @@ p {
 	/* this shoudl only apply to each child item, not the flex parent itself */
 	flex: 1 1 33%;
 	margin: 10px;
-	border: 1px green dashed;
+	/*border: 1px green dashed;*/
 }
 
 /* need to center all the things ! */
 .container-flex-output {
 	width: 90%;
-	border: 2px yellow solid;
+	/*border: 2px yellow solid;*/
 	/*flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'> /* Three values syntax */
 	/*flex: 1 1 400px;*/
 	display: flex;
