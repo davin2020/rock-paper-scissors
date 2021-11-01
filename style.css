@@ -65,7 +65,7 @@ p {
 	/*position: relative;*/
 	/*background-color: #85b3d1ff;*/
 	/*- Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)*/
-	background-color: hsl(214, 47%, 40%);
+	background-color: hsl(214, 47%, 23%);
 	width: 90%;
 	/*border: 2px red solid;*/
 	height: auto;	
@@ -83,6 +83,7 @@ p {
 	/*align-items: ;*/
 	justify-content: space-between;
 	/*margin: 10px;*/
+	margin-bottom: 10px;
 }
 
 /* TODO center vertically */
