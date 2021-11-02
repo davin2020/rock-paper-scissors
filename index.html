@@ -8,38 +8,95 @@
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
+<div class="container">
+	<div class="container-game">
+
+		<div class="container-header">
+			<div class="container-title">
+				<img src="images/logo.svg">
+			</div>
+			<div class="container-score">
+				<h2 class="score_title">Score</h2>
+				<p id="userScore" class="score_value">&nbsp12</p>
+			</div>
+
+		</div>
+
+		<div class="container-body">
+			<div id="div_icons" class="section-icons">
+				<!-- <img id="iconRock" src="images/icon-rock.svg">
+				<img id="iconPaper" src="images/icon-paper.svg">
+				<img id="iconScissors" src="images/icon-scissors.svg"> -->
+				<!-- imgs are now moving around after Play Again button ie they are closer to the title div -->
+				<img id="iconRock" src="images/icon-rock.svg" class="icon_border icon_size color_rock " >
+				<img id="iconPaper" src="images/icon-paper.svg" class="icon_border icon_size color_paper ">
+				<img id="iconScissors" src="images/icon-scissors.svg" class="icon_border icon_size color_scissors ">
+			  </div>
+			<div class="container-flex-output">
+				<!-- flex 3 -->
+				<div class="section-user-picked picked">
+					<h2>You Picked</h2>
+					<p id="userIcon">_</p>
+					<div id="div_user_icon"> 
+						<img id="userIconImage">
+					</div>
+				</div>
+				<div class="section-input-output picked center">
+					<h2>Result</h2>
+					<p id="resultMessage">_</p>
+					<!-- TODO hide button until after the Result is shown -->
+					<input type="submit" id="btnPlayAgain" value="Play Again" class="center">
+					<!-- alt buttons -->
+					<!-- <button type="submit" id="btnPlayAgain" value="Play Again">BTN</button> -->
+					<!-- <button onclick="toggleClock()" id="clockButton">Show clock</button> -->
+				</div>
+				<div class="section-house-picked picked">
+					<h2>The House Picked</h2>
+					<p id="houseIcon">_</p>
+					<div id="div_house_icon"> 
+						<img id="houseIconImage">
+						<!-- icon_size was applied to imgs -->
+					</div>
+				</div>
+			</div>
+			<!-- rules -->
+		</div>
+
+	</div>
+</div>
 
 <!--   Score
   Rules -->
-  <h1>Rock Paper Scissors</h1>
+<!--   <h1>Rock Paper Scissors</h1>
 
   <h2>Game with Interactive Functionality, Image Icons and Scoring</h2>
   <div>
-    <img id="iconRock" src="images/icon-rock.svg">
-    <img id="iconPaper" src="images/icon-paper.svg">
-    <img id="iconScissors" src="images/icon-scissors.svg">
+	<img id="iconRock" src="images/icon-rock.svg">
+	<img id="iconPaper" src="images/icon-paper.svg">
+	<img id="iconScissors" src="images/icon-scissors.svg">
   </div>
 
   <div>
-    <h2>You Picked</h2>
-    <p id="userIcon">_</p>
-    <img id="userIconImage" >
+	<h2>You Picked</h2>
+	<p id="userIcon">_</p>
+	<img id="userIconImage" >
   </div>
-  <div>
-    <h2>The House Picked</h2>
-    <p id="houseIcon">_</p>
-    <img id="houseIconImage" >
-  </div>
-
-  <div>
-    <h2>Result</h2>
-    <p id="resultMessage">_</p>
+  <div class="center">
+	<h2>The House Picked</h2>
+	<p id="houseIcon">_</p>
+	<img id="houseIconImage" >
   </div>
 
   <div>
-    <h2>Your Score</h2>
-    <p id="userScore">_</p>
+	<h2>Result</h2>
+	<p id="resultMessage">_</p>
   </div>
+
+  <div>
+	<h2>Your Score</h2>
+	<p class="center" id="userScore">_</p>
+  </div> -->
+
 <!--   
   You Win
   You Lose 
@@ -48,27 +105,29 @@
   Play Again
 -->
 
-  <input type="submit" id="btnPlayAgain" value="Play Again">
+  <!-- <input type="submit" id="btnPlayAgain" value="Play Again"> -->
+
 
   <script type="text/javascript" src="script.js"></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link href="style.css" type="text/css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Barlow+Semi+Condensed:600,700&amp;lang=en" />
+  <!-- Cross Origin Read Blocking issue -->
+  <!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Barlow+Semi+Condensed:600,700&amp;lang=en" /> -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+	.attribution { font-size: 11px; text-align: center; }
+	.attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+	Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+	Coded by <a href="#">Davin</a>.
   </div>
 </body>
 </html>
