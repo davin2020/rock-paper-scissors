@@ -25,22 +25,41 @@ You can pick an icon by clicking on it, the house then randomly picks an icon, a
 ## Problem Solving approach for this Challenge
 The first time I tried this challenge, earlier in the year, I approached it from a layout/styling-first perspective, and TBH didnt get very far with that approach as I'm more of a backend person. Last month in October I tried the challenge again, and this time decided on a functionality-first approach, which has worked out better for me. 
 
-Below is a rough summary of how I broke the challenge down into really smalll tasks, within different branches, and worked in an iterative way to create and then improve the games's functionality and then layout/styling.
+Below is a rough summary of how I broke the challenge down into really smalll tasks, within different branches. I then worked in an iterative way to create and then improve, the games's functionality and then layout/styling. I've tried to put the JS code in functions as much as possible.
 
 ### branch v3_functionality: auto picking 2 icons at random and showing output via the console
 - make an array with 3 items
 - pick an item at random from the array
-- display the result ie the picked icon
+- display the result ie the picked icon in the console
 - repeat this twice, once for each player
 - compare the Player1 and Player2 icons
-- work out the winner and give them 1 point
-<!-- display the score -->
+- work out the algorithm to determine the winner, and give them 1 point
+- display the scores in the console
 
-### branch v4_interactive: let the user pick an icon
+### branch v4_interactive: allow the user pick an icon via the browser
+- display 3 image icons in the browser
+- add event listeners to each image
+- show the chosen icon as text within the browser
+- call the existing function to pick a random icon
+- call the exsting function to determine the winner
+- show which player won, and the score, in the browser as text
 
 ### branch v5_score
+- show the score after each round, in the browser
+- add the Play Again button
+- add a delay after the user picks, before showing the house pick, and then the result/score
+- display the icon image of what was picked, as well as the text
+- reset the game when the user clicks the Play Again button?
 
 ### branch v6_new_readme
+- updated the readme with my progress
 
 ### branch v7_styling
+- workout all the container/layout divs required
+- adjust the fonts
+- add the relevant colours for borders, background etc
+- add flex box for main game area, showing result icons and score
+- add borders to icons and center them
+- hide/unhide the div containing the starting images
+- rest the game when the user clicks the Play Again button?
 
