@@ -16,8 +16,8 @@
 				<img src="images/logo.svg">
 			</div>
 			<div class="container-score">
-				<h2 class="score_title">Score</h2>
-				<p id="userScore" class="score_value">&nbsp12</p>
+				<h2 class="score_title uppercase">Score</h2>
+				<p id="userScore" class="score_value">&nbsp</p>
 			</div>
 
 		</div>
@@ -31,28 +31,31 @@
 				<img id="iconRock" src="images/icon-rock.svg" class="icon_border icon_size color_rock " >
 				<img id="iconPaper" src="images/icon-paper.svg" class="icon_border icon_size color_paper ">
 				<img id="iconScissors" src="images/icon-scissors.svg" class="icon_border icon_size color_scissors ">
-			  </div>
+			 </div>
 			<div class="container-flex-output">
 				<!-- flex 3 -->
-				<div class="section-user-picked picked">
-					<h2>You Picked</h2>
-					<p id="userIcon">_</p>
+				<div class="section-user-picked picked centerBtn">
+					<h2 class="uppercase">You Picked</h2>
+					<p id="userIcon"></p>
 					<div id="div_user_icon"> 
 						<img id="userIconImage">
 					</div>
 				</div>
-				<div class="section-input-output picked center">
-					<h2>Result</h2>
-					<p id="resultMessage">_</p>
-					<!-- TODO hide button until after the Result is shown -->
-					<input type="submit" id="btnPlayAgain" value="Play Again" class="center">
+				<div class="section-input-output picked centerBtn">
+					<!-- <h2 class="uppercase">Result</h2> -->
+					<!-- removign teh space here means no phsycial space is allocted to it! -->
+					<p id="resultMessage" class="uppercase resultText">&nbsp</p>
+					<!-- TODO hide button until after the Result is shown, does it need its own div first? -->
+					<div id="div_play_again">
+						<input type="submit" id="btnResetPlay" value="Play Again" class="center btnPlayAgain uppercase">
+					</div>
 					<!-- alt buttons -->
 					<!-- <button type="submit" id="btnPlayAgain" value="Play Again">BTN</button> -->
 					<!-- <button onclick="toggleClock()" id="clockButton">Show clock</button> -->
 				</div>
-				<div class="section-house-picked picked">
-					<h2>The House Picked</h2>
-					<p id="houseIcon">_</p>
+				<div class="section-house-picked picked centerBtn">
+					<h2 class="uppercase">The House Picked</h2>
+					<p id="houseIcon"></p>
 					<div id="div_house_icon"> 
 						<img id="houseIconImage">
 						<!-- icon_size was applied to imgs -->

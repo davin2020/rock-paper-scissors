@@ -16,10 +16,11 @@ playerIconScissors.addEventListener("click", function() {
   	startGame("scissors");
 });
 
-let playAgain = document.getElementById("btnPlayAgain");
+let playAgain = document.getElementById("btnResetPlay");
 playAgain.addEventListener("click", function() {
   	resetGame();
 });
+hideDiv("div_play_again");
 
 //only scoring for player1, the user, is required
 var player1Score = 0;
@@ -33,7 +34,7 @@ function startGame(userChosenIcon) {
 	updateElementWithImage("iconScissors", "");
 
 	hideDiv("div_icons");
-
+	hideDiv("div_play_again");
 	//show text and image of what user has picked
 	showDiv("div_user_icon");
 
@@ -41,7 +42,8 @@ function startGame(userChosenIcon) {
 	// let targetImage = document.getElementById("userIconImage");
 	// event.target.classList.toggle('icon_border');
 
-	updateElementWithContent("userIcon", player1Icon);
+	// no longer need to show text of icon
+	// updateElementWithContent("userIcon", player1Icon);
 	updateElementWithImage("userIconImage", player1Icon);
 
 	console.log('about to call setTimeout');
@@ -49,7 +51,8 @@ function startGame(userChosenIcon) {
 	setTimeout(() => {
 		let player2Icon = chooseRandomItem();
 		showDiv("div_house_icon");
-		updateElementWithContent("houseIcon", player2Icon);
+		// no longer need to show text of icon
+		// updateElementWithContent("houseIcon", player2Icon);
 		updateElementWithImage("houseIconImage", player2Icon);
 
 		// 2 sec delay until results/score are shown
@@ -58,6 +61,8 @@ function startGame(userChosenIcon) {
 			// console.log('Result: ' + result);
 			updateElementWithContent("resultMessage", result);
 			updateElementWithContent("userScore", player1Score);
+			//show play again button
+			showDiv("div_play_again");
 			// console.log('Player 1 Score - User: ' + player1Score);
 			// console.log('Player 2 Score - House: ' + player2Score);
 		}, 1500);
@@ -70,7 +75,7 @@ function resetGame() {
 	showDiv("div_icons");
 	hideDiv("div_user_icon");
 	hideDiv("div_house_icon");
-	
+	hideDiv("div_play_again");
 
 	//show the icon-images that the user can choose from
 	updateElementWithImage("iconRock", "rock");
@@ -78,32 +83,33 @@ function resetGame() {
 	updateElementWithImage("iconScissors", "scissors");
 
 	//remove the previouslly picked icons and images
-	updateElementWithContent("userIcon", "_");
+	// no longer need to show text of icon
+	// updateElementWithContent("userIcon", "_");
 	updateElementWithImage("userIconImage", "_");
-	updateElementWithContent("houseIcon", "_");
+	// updateElementWithContent("houseIcon", "_");
 	updateElementWithImage("houseIconImage", "_");
-	updateElementWithContent("resultMessage", "_");
+	updateElementWithContent("resultMessage", "&nbsp");
 }
 
 // const targetDiv = document.getElementById("third");
 // targetDiv.style.display = "block"; or none
 // id must be unique
 // ()
-// let playAgain = document.getElementById("btnPlayAgain");
+// let playAgain = document.getElementById("btnResetPlay");
 // playAgain.addEventListener("click", function() {
 //   	resetGame();
 // });
-//id must be unique - could toggle instead?
+
+//id must be unique - could toggle instead? but toggle isnt working
 function hideDiv(divID){
 	const targetDiv = document.getElementById(divID);
 	console.log(targetDiv);
-	// targetDiv.style.display = "none"; 
 	targetDiv.style.display = "none";
 }
+
 function showDiv(divID){
 	const targetDiv = document.getElementById(divID);
 	console.log(targetDiv);
-	// targetDiv.style.display = "none"; 
 	targetDiv.style.display = "block";
 }
 
@@ -146,7 +152,7 @@ function updateElementWithImage(element, icon) {
 	// <img id="iconScissors" src="images/icon-scissors.svg" class="icon_border icon_size color_scissors center">
 
 	//else remove the image if icon is empty string
-	//REVIEW maybe dont need to rmeove clases if i just hide th whole div?
+	//REVIEW maybe dont need to rmeove clases if i just hide the whole div?
 	else {
 		// document.getElementById(element).src = "";
 		targetImage.src = "";
@@ -164,7 +170,6 @@ function updateElementWithContent(element, content) {
 	document.getElementById(element).innerHTML = content;
 }
 
-
 function chooseRandomItem() {
 	let arrayItems = ['rock', 'paper', 'scissors'];
 	let chosenItem = arrayItems[Math.floor(Math.random()*arrayItems.length)];
@@ -176,7 +181,7 @@ function chooseRandomItem() {
 // - Paper beats Rock
 // - Rock beats Scissors
 // - Scissors beats Paper
-//Return a boolean for whether x beats y
+//Return a boolean for whether x beats y - could rename doesUserBeatHouse
 function doesXBeatY(x, y) {
 	if (x == 'paper' && y == 'rock') {
 		return true;
@@ -194,27 +199,28 @@ function doesXBeatY(x, y) {
 
 //this is better/makes more sense
 //how to keep score across multiple games? move scores into a separte function
+//rename player1 to userScore userItem/userIcon and player2 to houseScore and houseItem/houseIcon
 function determineWinner(player1Item, player2Item) {
 	let winner = '';
 	if (doesXBeatY(player1Item, player2Item)) {
 		//player 1 ie User wins
-		winner = 'You Win!!';
+		winner = 'You Win!';
 		player1Score ++;
 	}
 	//player 2 ie House wins
 	else if (doesXBeatY(player2Item, player1Item)) {
-		winner = 'You Lose, beaten by the House!';
+		winner = 'You Lose';
 		// player2Score ++;
 		player1Score --;
 	}
 	else {
-		winner = "It's a Draw!";
+		winner = "It's a Draw";
 	}
 	return winner;
 }
 
 
-//call the functions
+//call the functions - show output via node console
 // console.log('ROUND 1 - ');
 // let player1 = chooseRandomItem();
 // let player2 = chooseRandomItem();

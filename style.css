@@ -25,6 +25,8 @@ body {
 
 h2 {
 	text-align: center;
+	/*font-weight: 600;*/
+	font-size: 1.6rem;
 }
 div {
 	/*border: 2px solid green;*/
@@ -34,9 +36,35 @@ p {
 	text-align: center;
 }
 
+/*buttons*/
+.btnPlayAgain {
+	padding: 10px 30px;
+	/*blue*/
+	color: hsl(229, 25%, 31%);
+	border-radius: 10px;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.btnPlayAgain:hover {
+	/*color: yellow;*/
+	/*red*/
+	color: hsl(349, 71%, 52%);
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.resultText {
+	font-size: 2rem;
+	font-weight: 700;
+
+}
+
 .score_title {
 	font-size: 1.6rem;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	color: hsl(229, 64%, 46%);
 	margin: 10px;
 	padding: 0 10px;
@@ -109,7 +137,7 @@ p {
 .section-icons {
 	display: block;
 	margin: 0 auto;
-	/*border: 2px black solid;*/
+	border: 2px green solid;
 	/*background-color:white;*/
 }
 
@@ -117,18 +145,23 @@ p {
 	/* this shoudl only apply to each child item, not the flex parent itself */
 	flex: 1 1 33%;
 	margin: 10px;
-	/*border: 1px green dashed;*/
+	border: 1px green dashed;
+	/*seems to make themm all equal */
+	align-self: stretch;
+	padding: 5px;
+/*vertical-align: top;*/
 }
 
 /* need to center all the things ! */
 .container-flex-output {
 	width: 90%;
-	/*border: 2px yellow solid;*/
+	border: 2px yellow solid;
 	/*flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'> /* Three values syntax */
 	/*flex: 1 1 400px;*/
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+/*vertical-align: top;*/
 	justify-content: center;
 	/* Center horizontally using auto option*/
 	margin: 10px auto;
@@ -174,8 +207,11 @@ button {
 
 /*need to center parent of above button*/
 .center {
-	text-align: center;
+	/*text-align: center;*/
 	/*not right way to center img*/
 	margin: 0 auto;
 }
 
+.centerBtn {
+	text-align: center;
+}
