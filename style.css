@@ -99,7 +99,7 @@ p {
 	height: auto;	
 	/* Center horizontally*/
   	margin: 0 auto;
-  	padding: 10px;
+  	padding: 20px;
 }
 
 .container-header {
@@ -129,23 +129,26 @@ p {
 }
 
 .container-body {
-	/*border: 2px solid blue;*/
+	/*border: 2px dashed blue;*/
 	/*position: relative;*/
+	margin: 20px 0;
 }
 
 /*only centers div not imgs?*/
 .section-icons {
-	display: block;
+	/* was block, works ok for now */
+	display: flex;
 	margin: 0 auto;
-	border: 2px green solid;
-	/*background-color:white;*/
+	justify-content: space-around;
+	/*border: 2px green solid;*/
+	margin: 20px auto;
 }
 
 .picked {
 	/* this shoudl only apply to each child item, not the flex parent itself */
 	flex: 1 1 33%;
 	margin: 10px;
-	border: 1px green dashed;
+	/*border: 1px green dashed;*/
 	/*seems to make themm all equal */
 	align-self: stretch;
 	padding: 5px;
@@ -155,7 +158,7 @@ p {
 /* need to center all the things ! */
 .container-flex-output {
 	width: 90%;
-	border: 2px yellow solid;
+	/*border: 2px yellow solid;*/
 	/*flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'> /* Three values syntax */
 	/*flex: 1 1 400px;*/
 	display: flex;
@@ -164,7 +167,7 @@ p {
 /*vertical-align: top;*/
 	justify-content: center;
 	/* Center horizontally using auto option*/
-	margin: 10px auto;
+	margin: 20px auto;
 }
 
 .icon_size {

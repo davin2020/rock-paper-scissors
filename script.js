@@ -20,13 +20,20 @@ let playAgain = document.getElementById("btnResetPlay");
 playAgain.addEventListener("click", function() {
   	resetGame();
 });
+
+//might not need to hide both??
 hideDiv("div_play_again");
+hideDiv("div_output");
+// showDiv("div_icons");
+
 
 //only scoring for player1, the user, is required
 var player1Score = 0;
 var player2Score = 0; 
 
 function startGame(userChosenIcon) {
+	//this line makes this div flex into rows not cols!, as display needs to be flex not block!
+	showDiv("div_output");
 	let player1Icon = userChosenIcon;
 	//hide the icon-images that the user can choose from
 	updateElementWithImage("iconRock", "");
@@ -76,6 +83,7 @@ function resetGame() {
 	hideDiv("div_user_icon");
 	hideDiv("div_house_icon");
 	hideDiv("div_play_again");
+	hideDiv("div_output");
 
 	//show the icon-images that the user can choose from
 	updateElementWithImage("iconRock", "rock");
@@ -110,7 +118,8 @@ function hideDiv(divID){
 function showDiv(divID){
 	const targetDiv = document.getElementById(divID);
 	console.log(targetDiv);
-	targetDiv.style.display = "block";
+	// flex effectively displays as block but keeps 3 col layout
+	targetDiv.style.display = "flex";
 }
 
 
