@@ -49,11 +49,13 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 ![Image of Game from Branch v4](/screenshots/rock_v4.png)
 
 ### branch v5_score
+- adjust the scoring rules, as only the User (not the House) can gain/lose points 
 - show the score after each round, in the browser
-- add the Play Again button
-- add a delay after the user picks, before showing the house pick, and then the result/score
+- add a delay after the User picks, before showing the House pick, and then the result/score
 - display the icon image of what was picked, as well as the text
-- reset the game when the user clicks the Play Again button <!-- is this button actually working? -->
+- hide the original icon images after the user picks them, by removing the text for the src attribute, so they can reapprear once the Play Again button is clicked
+- add the Play Again button
+- reset the game when the user clicks the Play Again button ie remove the previously picked icons/text and winner details
 
 ![Image of Game from Branch v5](/screenshots/rock_v5.png)
 
@@ -61,10 +63,11 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 - updated the readme with my progress
 
 ### branch v7_styling
-- workout all the container/layout divs required
+- workout all the container/layout divs required and add them in
+- add the title image and score in the relevant divs
 - adjust the fonts
 - center the text
-- add the relevant colours for borders, background etc
+<!-- - add the relevant colours for borders, background etc  --> <!--  is this actually in v7 or not? or is the screenshot old/wrong? when did i add the title -->
 - add flex box for main game area, showing result icons and score
 <!-- - add borders to icons and center them / add bordrer around title?  -->
 - hide/unhide the div containing the starting icon images, after the user has selected one
@@ -73,6 +76,7 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 ![Image of Game from Branch v7](/screenshots/rock_v7.png)
 
 ### branch v7_layout_p2
+- add the relevant colours for borders, background etc 
 - add borders to icons and centered them
 - styled Play Again button with rounded edges & hover color 
 - hide Play Again button until after the Win/Lose text is displayed
