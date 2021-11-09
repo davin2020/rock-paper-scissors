@@ -35,6 +35,7 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 - compare the Player1 and Player2 icons
 - work out the algorithm to determine the winner, and give them 1 point
 - display the scores in the console
+
 ![Image of Game from Branch v3](/screenshots/rock_v3.png)
 
 ### branch v4_interactive: allow the user pick an icon via the browser
@@ -44,6 +45,7 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 - call the existing function to pick a random icon
 - call the exsting function to determine the winner
 - show which player won in the browser as text
+
 ![Image of Game from Branch v4](/screenshots/rock_v4.png)
 
 ### branch v5_score
@@ -52,6 +54,7 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 - add a delay after the user picks, before showing the house pick, and then the result/score
 - display the icon image of what was picked, as well as the text
 - reset the game when the user clicks the Play Again button <!-- is this button actually working? -->
+
 ![Image of Game from Branch v5](/screenshots/rock_v5.png)
 
 ### branch v6_new_readme
@@ -60,13 +63,20 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 ### branch v7_styling
 - workout all the container/layout divs required
 - adjust the fonts
-- center stuff
+- center the text
 - add the relevant colours for borders, background etc
 - add flex box for main game area, showing result icons and score
-- add borders to icons and center them
+<!-- - add borders to icons and center them / add bordrer around title?  -->
 - hide/unhide the div containing the starting icon images, after the user has selected one
-- rest the game when the user clicks the Play Again button?
+<!-- - rest the game when the user clicks the Play Again button? IS this in v5 or v7? -->
+
 ![Image of Game from Branch v7](/screenshots/rock_v7.png)
 
 ### branch v7_layout_p2
+- add borders to icons and centered them
+- styled Play Again button with rounded edges & hover color 
+- hide Play Again button until after the Win/Lose text is displayed
+- capitalised text, removed extra text & adjusted wording
+- hide output div with Results before games starts, and hide icon div with Starting Icons after user has picked an icon
+
 ![Image of Game from Branch v7 part 2](/screenshots/rock_v7p2.png)
