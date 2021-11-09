@@ -35,8 +35,6 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 - compare the Player1 and Player2 icons
 - work out the algorithm to determine the winner, and give them 1 point
 - display the scores in the console
-<!-- add image of what game/output looked like at thsi stage  -->
-
 ![Image of Game from Branch v3](/screenshots/rock_v3.png)
 
 ### branch v4_interactive: allow the user pick an icon via the browser
@@ -45,18 +43,16 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 - show the chosen icon as text within the browser
 - call the existing function to pick a random icon
 - call the exsting function to determine the winner
-- show which player won, and the score, in the browser as text
+- show which player won in the browser as text
 ![Image of Game from Branch v4](/screenshots/rock_v4.png)
-<!-- add image of what game/output looked like at thsi stage  -->
 
 ### branch v5_score
 - show the score after each round, in the browser
 - add the Play Again button
 - add a delay after the user picks, before showing the house pick, and then the result/score
 - display the icon image of what was picked, as well as the text
-- reset the game when the user clicks the Play Again button?
+- reset the game when the user clicks the Play Again button <!-- is this button actually working? -->
 ![Image of Game from Branch v5](/screenshots/rock_v5.png)
-<!-- add image of what game/output looked like at thsi stage  -->
 
 ### branch v6_new_readme
 - updated the readme with my progress
@@ -71,7 +67,6 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 - hide/unhide the div containing the starting icon images, after the user has selected one
 - rest the game when the user clicks the Play Again button?
 ![Image of Game from Branch v7](/screenshots/rock_v7.png)
-<!-- add image of what game/output looked like at thsi stage  -->
 
 ### branch v7_layout_p2
 ![Image of Game from Branch v7 part 2](/screenshots/rock_v7p2.png)
