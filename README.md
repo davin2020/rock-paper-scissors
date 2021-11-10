@@ -2,7 +2,7 @@
 
 From the [Frontend Mentor](https://www.frontendmentor.io) website
 
-## The challenge
+## The Challenge
 
 Your challenge is to build out this Rock, Paper, Scissors game and get it looking as close to the design as possible - using HTML, CSS and JavaScript
 
@@ -17,17 +17,20 @@ If the player wins, they gain 1 point. If the computer wins, the player loses on
 - Rock beats Scissors
 - Scissors beats Paper
 
-## Status
+## Status & Live Demo
 I've got the main functionality of the game working, and most of the styling/layout
 
 You can pick an icon by clicking on it, the house then randomly picks an icon, and the result and score are displayed
 
-## Problem Solving approach for this Challenge
+A live demo (currently of the pre_main branch) is online here - https://davin2020.github.io/rock-paper-scissors/
+
+
+## Problem Solving Approach
 The first time I tried this challenge, earlier in the year, I approached it from a layout/styling-first perspective, and TBH didnt get very far with that approach as I'm more of a backend person. Last month in October I tried the challenge again, and this time decided on a functionality-first approach, which has worked out better for me. 
 
-Below is a rough summary of how I broke the challenge down into really smalll tasks, within different branches. I then worked in an iterative way to create and then improve, the games's functionality and then layout/styling. I've tried to put the JS code in functions as much as possible.
+Below is a rough summary of how I broke the challenge down into really smalll tasks, within different branches. I then worked in an iterative way to create and then improve, the games's functionality and then it's layout/styling. I've tried to put the JS code in functions as much as possible, and will do some refactoring at a later stage.
 
-### branch v3_functionality: auto picking 2 icons at random and showing output via the console
+### Branch v3_functionality: Auto picking 2 icons at random and showing output via the console
 - make an array with 3 items
 - pick an item at random from the array
 - display the result ie the picked icon in the console
@@ -38,7 +41,7 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 
 ![Image of Game from Branch v3](/screenshots/rock_v3.png)
 
-### branch v4_interactive: allow the user pick an icon via the browser
+### Branch v4_interactive: Allow the user pick an icon via the browser
 - display 3 image icons in the browser
 - add event listeners to each image
 - show the chosen icon as text within the browser
@@ -48,7 +51,7 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 
 ![Image of Game from Branch v4](/screenshots/rock_v4.png)
 
-### branch v5_score
+### Branch v5_score: Calculating the points scored by the user
 - adjust the scoring rules, as only the User (not the House) can gain/lose points 
 - show the score after each round, in the browser
 - add a delay after the User picks, before showing the House pick, and then the result/score
@@ -59,10 +62,10 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 
 ![Image of Game from Branch v5](/screenshots/rock_v5.png)
 
-### branch v6_new_readme
-- updated the readme with my progress
+### Branch v6_new_readme: Updating the readme
+- updated the readme with my progress and details of my approach etc
 
-### branch v7_styling
+### Branch v7_styling: Setup basic layout and styling
 - workout all the container/layout divs required and add them in
 - add the title image and score in the relevant divs
 - adjust the fonts
@@ -75,7 +78,7 @@ Below is a rough summary of how I broke the challenge down into really smalll ta
 
 ![Image of Game from Branch v7](/screenshots/rock_v7.png)
 
-### branch v7_layout_p2
+### Branch v7_layout_p2: More detailed styling
 - add the relevant colours for borders, background etc 
 - add borders to icons and centered them
 - styled Play Again button with rounded edges & hover color 
