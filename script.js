@@ -21,6 +21,43 @@ playAgain.addEventListener("click", function() {
   	resetGame();
 });
 
+// rules 10 nov
+// btnShowRulesModal
+// btnShowRulesModal
+//modal button
+document.getElementById("btnShowRulesModal").addEventListener("click", function() {
+  	resetGame();
+  	let modal = document.querySelector(".modal-test")
+  	modal.style.display = "block"
+});
+
+//close button
+document.querySelector(".modal-close-btn").addEventListener("click", function() {
+  	// resetGame();
+  	let modal = document.querySelector(".modal-test")
+  	modal.style.display = "none"
+});
+
+//  MODAL STUFF
+let modalBtn = document.getElementById("modal-btn")
+let modal = document.querySelector(".modal")
+let closeBtn = document.querySelector(".close-btn")
+modalBtn.onclick = function(){
+  modal.style.display = "block"
+}
+closeBtn.onclick = function(){
+  modal.style.display = "none"
+}
+window.onclick = function(e){
+  if(e.target == modal){
+    modal.style.display = "none"
+  }
+}
+
+
+
+
+
 //might not need to hide both??
 hideDiv("div_play_again");
 hideDiv("div_output");
