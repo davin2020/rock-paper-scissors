@@ -129,11 +129,35 @@ p {
 }
 
 .container-body {
-	/*border: 2px dashed blue;*/
+	border: 2px dashed blue;
 	/*position: relative;*/
 	margin: 20px 0;
 }
 
+.container-footer {
+	justify-content: flex-end;
+	
+}
+
+.text_dark {
+	color: hsl(229, 25%, 31%);
+	font-size: 	2rem;
+	font-weight: 700;
+}
+/* this is beign used both for a P and a BUTTON ! - need to right align Rules button */
+.rules {
+	text-align: left;
+	/*background-color: white;*/
+	border: 2px white solid;
+	border-radius: 10px;
+	padding: 10px;
+	/*max-height: 120px;*/
+	margin: 10px;
+	margin-bottom: 	40px;
+	/*text-decoration-style: */
+	text-transform: uppercase;
+
+}
 /*only centers div not imgs?*/
 .section-icons {
 	/* was block, works ok for now */
@@ -158,7 +182,7 @@ p {
 /* need to center all the things ! */
 .container-flex-output {
 	width: 90%;
-	/*border: 2px yellow solid;*/
+	border: 2px yellow solid;
 	/*flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'> /* Three values syntax */
 	/*flex: 1 1 400px;*/
 	display: flex;
@@ -217,4 +241,104 @@ button {
 
 .centerBtn {
 	text-align: center;
+}
+
+
+/* my modal is here */
+.modal-test {
+	display: none;
+	/* this is neeed to make modal float on top of other stuff - bt how to position dynamically eg */
+	position: fixed; 
+	padding: 40px;
+	/*margin-top: 50px;*/
+	
+	/*width: 50%;*/
+	/*height: 50%; */
+	background-color: white;
+	border-radius: 10px;
+
+	/*how to center modal?*/
+	left: 50%; 
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	/*vertical-align: middle;*/
+	justify-content: center; /* horizontal */
+	align-items: center; /* vertical */
+}
+
+/* code from net - from https://medium.com/@debajyotim/making-an-element-center-simple-css-tricks-b51cca7597ce
+
+*/
+.your-modal-dialog{
+	/* To make the modal window center */
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* To make the modal content center (additional)*/
+	display: flex;
+	justify-content: center; /* horizontal */
+	align-items: center; /* vertical */
+}
+
+/* also try this for centering - https://coderwall.com/p/quutdq/how-to-really-center-an-html-element-via-css-position-absolute-fixed */
+.popup .wrapper{
+  position:relative; 
+  left:-50%;
+}  
+
+
+/* MODALS TEST */
+.modal {
+  display: none;
+  position: fixed; 
+  padding-top: 50px;
+  left: 0; 
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  position: relative; 
+  background-color: white;
+  padding: 20px; 
+  margin: auto; 
+  width: 75%;  
+/*  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s*/
+}
+.close-btn {
+  float: right; 
+  color: lightgray; 
+  font-size: 24px;  
+  font-weight: bold;
+}
+.close-btn:hover {
+  color: darkgray;
+}
+
+.modal-close-btn {
+	/* find alternative to floating */
+	float: right;
+	color: darkgray;
+	font-size: 36px;  
+  	font-weight: bold;
+  	text-align: right;
+}
+.modal-close-btn:hover {
+	cursor: pointer;
+}
+/*
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
