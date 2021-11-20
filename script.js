@@ -39,15 +39,27 @@ document.querySelector(".modal-close-btn").addEventListener("click", function() 
 });
 
 //  MODAL STUFF
-let modalBtn = document.getElementById("modal-btn")
 let modal = document.querySelector(".modal")
-let closeBtn = document.querySelector(".close-btn")
-modalBtn.onclick = function(){
-  modal.style.display = "block"
+
+// let modalBtn = document.getElementById("modal-btn")
+// modalBtn.onclick = function(){
+//   modal.style.display = "block"
+// }
+// let closeBtn = document.querySelector(".close-btn")
+// closeBtn.onclick = function(){
+//   modal.style.display = "none"
+// }
+
+let modalTest = document.querySelector(".modal-test")
+let showRulesModalBtn = document.getElementById("btnShowRulesModal")
+showRulesModalBtn.onclick = function(){
+  modalTest.style.display = "block"
 }
-closeBtn.onclick = function(){
-  modal.style.display = "none"
+let closeBtnModal = document.querySelector(".modal-close-btn")
+closeBtnModal.onclick = function(){
+  modalTest.style.display = "none"
 }
+
 window.onclick = function(e){
   if(e.target == modal){
     modal.style.display = "none"

@@ -129,7 +129,7 @@ p {
 }
 
 .container-body {
-	border: 2px dashed blue;
+	/*border: 2px dashed blue;*/
 	/*position: relative;*/
 	margin: 20px 0;
 }
@@ -146,7 +146,8 @@ p {
 }
 /* this is beign used both for a P and a BUTTON ! - need to right align Rules button */
 .rules {
-	text-align: left;
+	/*float:right;*/
+	/*text-align: right;*/
 	/*background-color: white;*/
 	border: 2px white solid;
 	border-radius: 10px;
@@ -182,7 +183,7 @@ p {
 /* need to center all the things ! */
 .container-flex-output {
 	width: 90%;
-	border: 2px yellow solid;
+	/*border: 2px yellow solid;*/
 	/*flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'> /* Three values syntax */
 	/*flex: 1 1 400px;*/
 	display: flex;
